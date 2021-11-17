@@ -1,4 +1,10 @@
 #!/usr/bin/env python
+# -*- coding: utf-8 -*-
+"""
+Created on Wed Nov 17 14:09:23 2021
+
+@author: Zhen-Hua Zhao (赵振华)
+"""
 import PySimpleGUI as sg
 import pandas as pd
 
@@ -343,7 +349,7 @@ while True:
         data = getdata(filename,header_list,dingdanshujulx) #重新从文件读取数据
         dingdanwin['-TABLE-'].update(data) #刷新数据
         shuruzhuangt(1,0)#更新输入界面状态
-    if ev1 in (None, '-dingdantuichu-') : 
+    if ev1 in (None, '-dingdantuichu-','-fahuodantuichu-','-duizhangdantuichu-'):
         dingdanwin.close()
         break
 
